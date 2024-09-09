@@ -50,19 +50,23 @@ document.getElementById('todoForm').addEventListener('submit', function(event) {
 
 
 
-
-
-
 function updateTable() {
     const todoList = document.getElementById('todoList');
     todoList.innerHTML = ''; 
+
+    const showFullId = document.getElementById('showFullId').checked;
 
     todos.forEach((task) => {
         const row = document.createElement('tr');
 
         const idCell = document.createElement('td');
         idCell.setAttribute('id', 'idColumn');
-        idCell.textContent = task.id;
+        
+        if (showFullId) {
+            idCell.textContent = task.id;  
+        } else {
+            idCell.textContent = task.id.slice(0, 3) + '...';  
+        }
 
         const textCell = document.createElement('td');
         textCell.textContent = task.text;
@@ -85,6 +89,46 @@ function updateTable() {
         todoList.appendChild(row);
     });
 }
+
+document.getElementById('showFullId').addEventListener('change', updateTable);
+
+
+
+
+
+
+// function updateTable() {
+//     const todoList = document.getElementById('todoList');
+//     todoList.innerHTML = ''; 
+
+//     todos.forEach((task) => {
+//         const row = document.createElement('tr');
+
+//         const idCell = document.createElement('td');
+//         idCell.setAttribute('id', 'idColumn');
+//         idCell.textContent = task.id.slice(0, 3) + '...';
+
+//         const textCell = document.createElement('td');
+//         textCell.textContent = task.text;
+
+//         const statusCell = document.createElement('td');
+//         statusCell.textContent = task.status;
+
+//         const actionsCell = document.createElement('td');
+//         actionsCell.innerHTML = `
+//             <button onclick="editTask('${task.id}')">Edit</button>
+//             <button onclick="deleteTask('${task.id}')">Delete</button>
+//             <button onclick="markAsDone('${task.id}')">Done</button>
+//         `;
+
+//         row.appendChild(idCell);
+//         row.appendChild(textCell);
+//         row.appendChild(statusCell);
+//         row.appendChild(actionsCell);
+
+//         todoList.appendChild(row);
+//     });
+// }
 
 
 
