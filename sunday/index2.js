@@ -127,3 +127,23 @@ function processString(str) {
 console.log(processString(''));          
 console.log(processString('     '));     
 console.log(processString(' elad hello ')); 
+
+/////////////////////////////////////////////////////////////////////////
+function createList3(list1, list2) {
+    const sumList2 = list2.reduce((sum, num) => sum + num, 0); 
+    const list3 = list1.map((_, i) => {
+        const productExceptI = list1.reduce((product, num, index) => {
+            return index !== i ? product * num : product;
+        }, 1);
+        
+        return productExceptI * sumList2;
+    });
+
+    return list3;
+}
+
+const list1 = [1, 2, 3, 4];
+const list2 = [5, 6, 7, 8];
+
+const list3 = createList3(list1, list2);
+console.log(list3);

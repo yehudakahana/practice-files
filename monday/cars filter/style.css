@@ -1,0 +1,129 @@
+body {
+    background-color: #f0f8ff; /* רקע עדין */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #333; /* צבע כהה לקריאות טובה */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #ff6347; /* צבע אדום חם */
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    width: 300px;
+}
+
+div {
+    color: #00509e; /* צבע כחול כהה */
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #008000; /* ירוק כהה */
+    font-size: 22px;
+    text-align: center;
+    border: 3px solid #5f9ea0; /* צבע מסגרת עדין */
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff6347; /* צבע רקע לכפתור */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #e55347; /* רקע כהה יותר במעבר עם העכבר */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+
+}
+
+
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+
+}
+input{
+    margin-bottom: 40px;
+}
+
+div{
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    color: green;
+    font-size: 20px;
+    text-align: center;
+    border: cadetblue 5px solid;
+} */

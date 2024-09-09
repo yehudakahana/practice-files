@@ -113,29 +113,50 @@ const addresArray = data.map(person => `${person.address.street}, ${person.addre
 // console.log(addresArray);
 
 // Exercise 3: Use the map method to get the hobbies of all the people in the data array in a single array
-
+const hobbyArray = data.map(person => person.hobbies);
+// console.log(hobbyArray);
 
 // FIND
 
 // Exercise 1: Use the find method to find the first person who lives in Chicago
+const chicagoPerson = data.find(person => person.address.city === "Chicago");
+
+//  console.log(chicagoPerson);
+
 
 // Exercise 2: Use the find method to find the first person who is older than 30
+const olderThan30 = data.find(person => person.age > 30);
+// console.log(olderThan30);
+
 
 // Exercise 3: Use the find method to find the first person who has "reading" as a hobby
+
+const readingHobby = data.find(person => person.hobbies.includes("reading"));
+// console.log(readingHobby);
 
 
 // FOREACH
 
 // Exercise 1: Use the forEach method to print out the names of all the people in the data array
+ data.forEach(person =>console.log( person.name));
+
 
 // Exercise 2: Use the forEach method to add a new property "isAdult" to each person object and set it to true if the person is over 18 and false if not
+data.forEach(person => {
+    person.isAdult = person.age > 18;
+})
+// console.log(data);
 
 // Exercise 3: Use the forEach method to print out the names of all the friends of each person
-
+// data.forEach(person => {
+//     console.log(person.friends.map(friend => friend.name));
+// })
 
 // SOME
 
 // Exercise 1: Use the some method to check if any of the people in the data array have "cooking" as a hobby
+const cookingHobby = data.some(person => person.hobbies.includes("cooking"));
+//  console.log(cookingHobby);
 
 // Exercise 2: Use the some method to check if any of the people in the data array live in California
 
