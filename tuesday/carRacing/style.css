@@ -1,0 +1,67 @@
+body {
+    background-color: #a3e7e2;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #4b61af;
+}
+
+#input-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#input {
+    margin: 10px;
+    padding: 5px;
+}
+
+#btnStart, #resetBtn {
+    margin: 10px;
+    padding: 10px;
+    background-color: #4b61af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resetBtn {
+    display: none; 
+    background-color:  #4b61af;
+}
+
+.race-row {
+    height: 50px; 
+    margin-bottom: 5px;
+    background-color: white;
+    border: 2px solid lightcyan;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image {
+    position: absolute;
+    top: 10px;
+    left: -100px; 
+    height: 30px; 
+    width: 50;
+    transition: left 0.5s linear;
+}
+
+#results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.finish-line {
+    right: 3px;
+    position: absolute;
+    bottom: 0;
+    width: 5px; 
+    height: 100%; 
+    background-color: red; 
+    z-index: 1; 
+}
